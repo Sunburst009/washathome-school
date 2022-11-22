@@ -1,6 +1,6 @@
 # project-washathome
 
-This is the project I presented when I passed my exam in 10/2021.
+This is the project as it was when I presented when I passed my exam in 10/2021.
 
 This is a React/Node project that me and 3 of my classmates developped that "uberises" the washing machine.
 
