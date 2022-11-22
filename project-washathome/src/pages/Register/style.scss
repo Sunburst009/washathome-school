@@ -1,0 +1,84 @@
+@use 'src/styles/vars.scss';
+@import 'src/styles/mixins.scss';
+
+.register {
+  width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: vars.$color-bg-hero;
+  color: vars.$white;
+
+  &-btn {
+    &--close {
+      @include btn-close;
+      align-self: flex-end;
+      margin-right: 1.8rem;
+      &:hover,
+      &:active {
+        background-color: darken($color: vars.$color-action, $amount: 10%);
+        color: vars.$white;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 2rem;
+  }
+
+  &-form {
+    width: 90vw;
+    @media screen and (min-width: 700px) {
+      display: flex;
+      justify-content: center;
+      width: 80vw;
+      text-align: center;
+      padding: 1rem;
+    }
+    &-left {
+      @media screen and (min-width: 700px) {
+        margin-right: 1rem;
+        max-width: 50%;
+      }
+    }
+
+    &-btn {
+      @include btn-green;
+      &:hover,
+      &:active {
+        background-color: lighten(vars.$color-action, 10%);
+      }
+    }
+    &-input {
+      width: 100%;
+      color: vars.$color-action;
+      &--check {
+        color: vars.$white;
+        margin: 1rem 0;
+        &-link {
+          font-weight: bold;
+
+          &:hover,
+          &:active {
+            color: vars.$color-action;
+          }
+        }
+      }
+    }
+
+    &-btn {
+      color: vars.$white;
+      width: 100%;
+      @media screen and (min-width: 700px) {
+        max-width: 15rem;
+      }
+      background-color: vars.$color-action;
+      &:hover,
+      &:active {
+        background-color: lighten(vars.$color-action, 10%);
+      }
+    }
+  }
+}

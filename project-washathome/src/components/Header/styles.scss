@@ -1,0 +1,73 @@
+@use 'src/styles/vars.scss';
+
+.header {
+  background-color: vars.$color-bg-hero;
+  min-width: 100vw;
+  min-height: 90vh;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &-logo {
+    // display mobile first
+    max-width: 60px;
+    max-height: 60px;
+    // display for desktop
+    margin-top: 5rem;
+    @media screen and (min-width: 700px) {
+      display: none;
+    }
+  }
+  &-container-top {
+    &-mission {
+      color: vars.$color-hover;
+      margin: 2rem;
+      line-height: 1.3rem;
+    }
+  }
+  .searchbar {
+    margin: 3rem auto;
+  }
+  .leaflet-container {
+    width: 90%;
+    height: 10rem;
+    border-radius: 10px;
+    @media screen and (min-width: 700px) {
+      width: 40rem;
+      height: 25rem;
+      margin: 0.5rem auto;
+    }
+  }
+  &-container-bottom {
+    &-map {
+      &-popup {
+        max-width: 6rem;
+        overflow-wrap: break-word;
+        &-title {
+          font-weight: bold;
+          color: vars.$color-action;
+          text-transform: capitalize;
+        }
+        &-city {
+          font-weight: bold;
+          color: vars.$color-cards;
+          text-transform: capitalize;
+        }
+        &-price {
+          margin-left: 2rem;
+          color: vars.$red;
+        }
+        &-picture {
+          max-width: 100%;
+          max-height: 10rem;
+        }
+        &-description {
+          max-width: 6rem;
+        }
+      }
+    }
+  }
+}

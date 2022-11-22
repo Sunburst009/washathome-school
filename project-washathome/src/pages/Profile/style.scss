@@ -1,0 +1,96 @@
+@use 'src/styles/vars.scss';
+@import 'src/styles/mixins.scss';
+
+.profile {
+  background-color: rgba($color: vars.$color-cards, $alpha: 0.8);
+  min-height: 90vh;
+  min-width: 100vw;
+  color: vars.$white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.5rem;
+  @media screen and (min-width: 700px) {
+    min-width: 25vw;
+  }
+  &-btn {
+    @include btn-close;
+    align-self: flex-end;
+    margin-right: 1.8rem;
+    &:hover,
+    &:active {
+      background-color: lighten(vars.$white, 10%);
+    }
+  }
+  &-title {
+    font-weight: bold;
+  }
+  &-credentials {
+    max-width: 95vw;
+   
+      @media screen and (min-width: 700px) {
+        display: flex;
+        justify-content: center;
+        width: 80vw;
+        text-align: center;
+        padding: 1rem;
+      }
+
+    &-left{
+      @media screen and (min-width: 700px) {
+        margin-right: 1rem;
+        max-width: 50%;
+      }
+    }
+    &-label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      text-align: justify;
+      margin: 0.5rem 0;
+      &-input {
+        height: 3rem;
+        width: 100%;
+        font-size: 1rem;
+        border-radius: 10px;
+        padding: 0.5rem;
+        color: vars.$color-action;
+      }
+      &-avatar {
+        &-container{
+          display: flex;
+          justify-content: space-between;
+        }
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin-right: .5rem; 
+      }
+    }
+    &-btn {
+      &-container {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: 700px) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+      @include btn-green;
+      &:hover,
+      &:active {
+        background-color: lighten(vars.$color-action, 10%);
+      }
+      &--delete {
+        background-color: vars.$black;
+        &:hover,
+        &:active {
+          background-color: lighten(vars.$red, 10%);
+        }
+      }
+    }
+  }
+}

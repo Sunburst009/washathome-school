@@ -1,0 +1,11 @@
+correspond, 11 RESERVATION , 0N MACHINE
+MACHINE : capacité, nom, description, code postale, adresse ,ville, latitude , longitude,  prix, Picture
+possède, 0N OPTION, 0N MACHINE
+
+RESERVATION: dispo, température, 
+inclue, 0N OPTION ,0N RESERVATION
+OPTION : nom, prix
+
+possede, 11 RESERVATION ,0N STATUS
+STATUS : label
+:
